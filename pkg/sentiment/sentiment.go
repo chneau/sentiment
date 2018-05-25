@@ -13,7 +13,7 @@ var (
 	// Words is a map of all known words as key.
 	// The value is either -1 (negative) or 1 (positive)
 	Words = map[string]int{}
-	reg   = regexp.MustCompile("[^a-z]+")
+	reg   = regexp.MustCompile("[^a-z\\-]+") // TODO maybe remove "-"
 )
 
 func init() {
@@ -39,7 +39,7 @@ func init() {
 	if err != nil {
 		panic(err)
 	}
-	wpos := strings.Fields(strings.ToLower(string(bpos)))
+	wpos := strings.Fields(strings.ToLower(string(bpos))) // TODO maybe remove/transform all "-" and "'" ...
 	wneg := strings.Fields(strings.ToLower(string(bneg)))
 	for w := range wpos {
 		Words[wpos[w]] = 1
