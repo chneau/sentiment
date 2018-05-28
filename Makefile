@@ -17,8 +17,14 @@ build:
 
 clean:
 	rm -rf bin
-	rm -rf upload
 
 deps:
 	go get -d -u -v ./...
+
+test:
+	GOCACHE=off go test -v ./pkg/sentiment/...
+
+testargv: buildPublic build
+	./bin/app super happy
+	$(MAKE) clean
 

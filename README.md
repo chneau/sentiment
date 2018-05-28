@@ -74,3 +74,7 @@ A sentiment tool
 ;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ```
+```
+badwords
+https://www.freewebheaders.com/full-list-of-bad-words-banned-by-google/
+```

@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"log"
 	"os"
 	"os/signal"
@@ -35,10 +36,6 @@ func printMapWords() {
 }
 
 func main() {
-	// TODO: command line to check a phrase
-	// TODO: feed more data into the map (like yougster language "lol" and so on)
-	word := "hello i'm super happy haha"
-	result := sentiment.Evaluate(word)
-	log.Println("word", word)
-	log.Println("result", result)
+	result := sentiment.Evaluate(os.Args[1:]...)
+	fmt.Println(result)
 }
