@@ -1,6 +1,7 @@
 package main
 
 import (
+	"bufio"
 	"fmt"
 	"log"
 	"os"
@@ -36,6 +37,15 @@ func printMapWords() {
 }
 
 func main() {
-	result := sentiment.Evaluate(os.Args[1:]...)
-	fmt.Println(result)
+	toAnalyse := []string{}
+	if len(os.Args) == 1 {
+		reader := bufio.NewReader(os.Stdin)
+		fmt.Println("Enter text then press enter")
+		text, _ := reader.ReadString('\n')
+		toAnalyse = []string{text}
+	} else {
+		toAnalyse = os.Args[1:]
+	}
+	result := sentiment.Evaluate(toAnalyse...)
+	fmt.Println("Score:", result)
 }
