@@ -19,7 +19,12 @@ clean:
 	rm -rf bin
 
 deps:
-	go get -d -u -v ./...
+	govendor init
+	govendor add +e
+	govendor update +v
+
+dev:
+	go get -u -v github.com/kardianos/govendor
 
 test:
 	GOCACHE=off go test -v ./pkg/sentiment/...

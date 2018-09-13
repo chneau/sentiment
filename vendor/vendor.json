@@ -1,0 +1,13 @@
+{
+	"comment": "",
+	"ignore": "test",
+	"package": [
+		{
+			"checksumSHA1": "Pps01vZwszFzmTQixlqFizN/w14=",
+			"path": "github.com/rakyll/statik/fs",
+			"revision": "aa8a7b1baecd0f31a436bf7956fcdcc609a83035",
+			"revisionTime": "2018-08-21T05:40:24Z"
+		}
+	],
+	"rootPath": "github.com/chneau/sentiment"
+}
