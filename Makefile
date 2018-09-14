@@ -25,6 +25,7 @@ deps:
 
 dev:
 	go get -u -v github.com/kardianos/govendor
+	go get -u -v github.com/rakyll/statik
 
 test:
 	GOCACHE=off go test -v ./pkg/sentiment/...
